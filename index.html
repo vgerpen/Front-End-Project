@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex" />
+    <meta charset="utf-8" />
+
+    <title>My Project</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./mystyle.css" />
+    <script src="myscripts.js"></script>
+    <!-- bootstrap links -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- My Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="myscripts.js"></script>
+  </head>
+
+  <body>
+    <h2><strong>Occupation Overview</strong></h2>
+    <h3>
+      <span class="OverViewHeaderSub"></span>
+    </h3>
+    <br />
+    <h3>
+      <strong><span class="SummaryHeader"></span></strong>
+    </h3>
+    <br>
+
+    <div class="container-fluid">
+      <div class="row Summary">
+        <div class="col-sm-4 Summary-Left" style=>
+          <div style="font-size: 32px" class="jobsNumber"></div>
+          <strong><div class="jobsYear"></div></strong>
+		  
+			<div class="row">
+				<span class="jobsCompareNationalAvg"></span>
+				<span class="direction"></span>
+				<span>National average</span>
+			</div>
+			
+          <div class="jobsCompareNationalAvg"></div>
+        </div>
+        <div class="col-sm-4 Summary-Middle" style=>
+          <div style="font-size: 32px" class="DynRegionPercentChange"></div>
+          <strong><div class="PercentChangeTrend"></div></strong>
+          <div>
+		  
+				<span>Nation: </span>
+				<span class="nationDirection"></span>
+		  
+		  </div>
+        </div>
+        <div class="col-sm-4 Summary-Right" style=>
+          <div style="font-size: 32px" class="hourlyRegionalAverage"></div>
+          <div><strong><p>Median Hourly Earnings</p></strong></div>
+          <div class="hourlyNationalAverage"></div>
+        </div>
+      </div>
+    </div>
+    
+    <br />
+    <h3><strong>Regional Trends</strong></h3>
+    <hr />
+
+    <div class="container" style="width: 90%;">
+      <canvas id="myChart"></canvas>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col" id="symbol"></th>
+            <th scope="col" id="separator">Region</th>
+            <th scope="col" class="FirstYear">Placeholder</th>
+            <th scope="col" class="EndYear">Placeholder</th>
+            <th scope="col">Change</th>
+            <th scope="col">% Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><img src="Assets/BigCircle.png" /></th>
+            <td>Region</td>
+            <td class="RegionFirstYearJobNum">Replace</td>
+            <td class="RegionLastYearJobNum">Placeholder</td>
+            <td class="RegionJobChange">Placeholder</td>
+            <td class="RegionPercentChange">Placeholder</td>
+          </tr>
+          <tr>
+            <th scope="row"><img src="Assets/BigSquare.png" /></th>
+            <td>State</td>
+            <td class="StateFirstYearJobNum">Placeholder</td>
+            <td class="StateLastYearJobNum">Placeholder</td>
+            <td class="StateJobChange">Placeholder</td>
+            <td class="StatePercentChange">Placeholder</td>
+          </tr>
+          <tr>
+            <th scope="row"><img src="Assets/BigTriangle.png" /></th>
+            <td>Nation</td>
+            <td class="NationFirstYearJobNum">Placeholder</td>
+            <td class="NationLastYearJobNum">Placeholder</td>
+            <td class="NationJobChange">Placeholder</td>
+            <td class="NationPercentChange">Placeholder</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <h3>
+      <strong>Industries Employing <span class="BottomJobTitle"></span></strong>
+    </h3>
+    <hr />
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col" id="symbol"></th>
+            <th scope="col" id="separator">Industry</th>
+            <th scope="col">
+              Occupation Jobs in Industry (<span class="BottomJobsYear"></span>)
+            </th>
+            <th scope="col">
+              % of Occupation in Industry (<span
+                class="BottomJobsYearTwo"
+              ></span
+              >)
+            </th>
+            <th scope="col">
+              % of total jobs in Industry (<span
+                class="BottomJobsYearThree"
+              ></span
+              >)
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="industry0">
+            <th scope="row"><img src="Assets/blueThing.png" /></th>
+            <td class="FirstInd Bottom-Blue-Text">Placeholder</td>
+            <td class="FirstIndJobNums">Placeholder</td>
+            <td class="FirstPercentofInd">Placeholder</td>
+            <td class="FirstPercentofTotalInd">Placeholder</td>
+          </tr>
+          <tr class="industry1">
+            <th scope="row"><img src="Assets/blueThing.png" /></th>
+            <td class="SecondInd Bottom-Blue-Text">Placeholder</td>
+            <td class="SecondIndJobNums">Placeholder</td>
+            <td class="SecondPercentofInd">Placeholder</td>
+            <td class="SecondPercentofTotalInd">Placeholder</td>
+          </tr>
+          <tr class="industry2">
+            <th scope="row"><img src="Assets/blueThing.png" /></th>
+            <td class="ThirdInd Bottom-Blue-Text">Placeholder</td>
+            <td class="ThirdIndJobNums">Placeholder</td>
+            <td class="ThirdPercentofInd">Placeholder</td>
+            <td class="ThirdPercentofTotalInd">Placeholder</td>
+          </tr>
+          <tr class="industry3">
+            <th scope="row"><img src="Assets/blueThing.png" /></th>
+            <td class="FourthInd Bottom-Blue-Text">Placeholder</td>
+            <td class="FourthIndJobNums">Placeholder</td>
+            <td class="FourthPercentofInd">Placeholder</td>
+            <td class="FourthPercentofTotalInd">Placeholder</td>
+          </tr>
+          <tr class="industry4">
+            <th scope="row"><img src="Assets/blueThing.png" /></th>
+            <td class="FifthInd Bottom-Blue-Text">Placeholder</td>
+            <td class="FifthIndJobNums">Placeholder</td>
+            <td class="FifthPercentofInd">Placeholder</td>
+            <td class="FifthPercentofTotalInd">Placeholder</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

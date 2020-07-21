@@ -1,0 +1,82 @@
+body {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 15%;
+  border: 10px solid rgb(192, 192, 192);
+  margin-right: 15%;
+  padding: 25px;
+}
+
+hr {
+  color: rgb(192, 192, 192);
+}
+
+p {
+  display: inline;
+}
+
+.Summary {
+  text-align: center;
+  border-top: 1px solid rgb(192, 192, 192);
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+.Summary-Left {
+  border-right: 1px solid rgb(192, 192, 192);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.Summary-Middle {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.Summary-Right {
+  border-left: 1px solid rgb(192, 192, 192);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#symbol {
+  width: 30px;
+}
+
+#separator {
+  width: 600px;
+}
+(0,76,123)
+td {
+  font-size: 16px;
+}
+
+.Bottom-Blue-Text {
+  color: rgb(51, 153, 255);
+}
+
+tr {
+  background-size: 0% 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(209, 238, 255, 1) 0%,
+    rgba(209, 238, 255, 1) 17%,
+    rgba(209, 238, 255, 1) 33%,
+    rgba(209, 238, 255, 1) 67%,
+    rgba(209, 238, 255, 1) 83%,
+    rgba(209, 238, 255, 1) 100%
+  ); /* your gradient */
+  background-repeat: no-repeat; /* don't remove */
+}
+
+tr.negative {
+  background-image: linear-gradient(
+    to left,
+    rgba(209, 238, 255, 1) 0%,
+    rgba(209, 238, 255, 1) 17%,
+    rgba(209, 238, 255, 1) 33%,
+    rgba(209, 238, 255, 1) 67%,
+    rgba(209, 238, 255, 1) 83%,
+    rgba(209, 238, 255, 1) 100%
+  ); /* your gradient */
+  background-position: 100% 100%;
+}
